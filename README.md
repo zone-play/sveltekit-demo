@@ -5,10 +5,10 @@
 ### 创建项目
 
 ```bash
-# 在当前目录创建一个新项目
+# 在当前项目根目录安装
 npm init svelte@next
 
-# create a new project in my-app
+# 创建一个新项目
 npm init svelte@next my-app
 ```
 
