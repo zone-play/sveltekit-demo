@@ -185,6 +185,30 @@ on:click|once|capture={...}
 
 > 我的理解是不需要用户操作的就可更新的只读值称为`readable`，例如 用户地理位置、时间等
 
+13. [drived](https://svelte.dev/tutorial/derived-stores)
+
+> 我的理解是将多个值合并为一个方法返回，称为`derived`派生，可订阅这个方法或者方法里面的值。
+
+14. [custom store - 自定义商店ttps://svelte.dev/tutorial/custom-stores)
+
+15. [store-bind](https://svelte.dev/tutorial/store-bindings)
+
+> store也可以使用绑定
+
+### 八、[Motion运动](https://svelte.dev/tutorial/tweened)
+
+### 九、[transition过渡](https://svelte.dev/tutorial/transition)
+
+### 十、[Animate动画](https://svelte.dev/tutorial/animate)
+
+### 十一、[Action元素级生命周期函数](https://svelte.dev/tutorial/actions)
+
+
+
+
+
+
+
 
 
 
