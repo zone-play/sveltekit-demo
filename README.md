@@ -68,4 +68,9 @@ module.exports = {
 
 ![image](https://user-images.githubusercontent.com/93444868/141734003-db35366b-176e-450b-8f1f-c89700e1507a.png)
 
+2. [反应式语句](https://www.sveltejs.cn/tutorial/reactive-statements)
+
+![image](https://user-images.githubusercontent.com/93444868/141735023-be37296c-17b6-4ea9-a990-86e25c44d0f0.png)
+
+
 
