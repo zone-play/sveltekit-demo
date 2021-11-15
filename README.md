@@ -61,3 +61,7 @@ module.exports = {
   }
 }
 ```
+
+# Svelte 中涉及的非常规知识
+
+1. [label 标记语句](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/label)
