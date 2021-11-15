@@ -64,25 +64,31 @@ module.exports = {
 
 # Svelte 中涉及的非常规知识
 
+> Svelte 本身就是一个编译器，
+
 ### 一、反应性能力
 
-1. [反应式声明](https://www.sveltejs.cn/tutorial/reactive-declarations) &nbsp;&nbsp; [label标记语句，`Svelte的第一特性`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/label)
+1. [反应式-声明](https://svelte.dev/tutorial/reactive-declarations) &nbsp;&nbsp; [label标记语句，`Svelte的第一特性`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/label)
 
 ![image](https://user-images.githubusercontent.com/93444868/141734003-db35366b-176e-450b-8f1f-c89700e1507a.png)
 
-2. [反应式语句](https://www.sveltejs.cn/tutorial/reactive-statements)
+2. [反应式-语句](https://svelte.dev/tutorial/reactive-statements)
 
 ![image](https://user-images.githubusercontent.com/93444868/141735023-be37296c-17b6-4ea9-a990-86e25c44d0f0.png)
 
-3. [更新数组和对象-Svelte的反应性是由赋值语句触发的](https://www.sveltejs.cn/tutorial/updating-arrays-and-objects)
+3. [更新数组和对象-Svelte的反应性是由赋值语句触发的](https://svelte.dev/tutorial/updating-arrays-and-objects)
 
-### 二、属性
+> 相对比较不好理解，需要多练习
 
-4. [属性传递 道具properties - 使用export关键字，`Svelte的第二特性`](https://www.sveltejs.cn/tutorial/declaring-props)
+### 二、属性 (与绑定章节有区别)
 
-### 三、HTML中的逻辑语块 [一个#字符始终表示块打开标签。一个/字符始终表示块结束标记。](https://www.sveltejs.cn/tutorial/else-blocks)
+> 将数据从一个组件向下传递到其子组件
 
-5. [为 each 块添加 key](https://www.sveltejs.cn/tutorial/keyed-each-blocks)
+4. [属性传递-道具properties - 使用export关键字，`Svelte的第二特性`](https://svelte.dev/tutorial/declaring-props)
+
+### 三、HTML中的逻辑语块 [一个#字符始终表示块打开标签。一个/字符始终表示块结束标记。](https://svelte.dev/tutorial/else-blocks)
+
+5. [为 each 块添加 key](https://svelte.dev/tutorial/keyed-each-blocks)
 
 ```base
 {#each things as thing (thing.id)}
@@ -90,7 +96,7 @@ module.exports = {
 {/each}
 ```
 
-6. [使用 await 处理数据](https://www.sveltejs.cn/tutorial/await-blocks)
+6. [使用 await 处理数据](https:svelte.dev/tutorial/await-blocks)
 
 ```base
 {#await promise}
@@ -107,5 +113,45 @@ module.exports = {
 	<p>the value is {value}</p>
 {/await}
 ```
+
+### 四、事件 使用on:指令监听元素上的任何事件
+
+7. [DOM事件-修饰符](https://svelte.dev/tutorial/event-modifiers)
+
+```base
+on:click|once|capture={...}
+```
+
+8. [组件事件-createEventDispatcher](https://svelte.dev/tutorial/component-events) 
+
+9. [组件事件-转发](https://svelte.dev/tutorial/event-forwarding)
+
+> 与 DOM 事件不同， 组件事件不会 冒泡（bubble） ，如果想要在某个深层嵌套的组件上监听事件，则中间组件必须 转发（forward） 该事件。
+
+10. [DOM事件-转发](https:svelte.dev/tutorial/dom-event-forwarding)
+
+### 五、[绑定](https://svelte.dev/tutorial/text-inputs)  (与属性道具 props 章节有区别)
+
+> 相对比较繁杂，需要在实践中多运用. Svelte 中的数据流是自上而下的——父组件可以在子组件上设置 props，组件可以在元素上设置属性，但反过来不行。
+
+> 有时打破这条规则很有用。以<input>这个组件中的元素为例——我们可以添加一个on:input事件处理程序来设置nameto的值event.target.value，但这有点......样板。正如我们将看到的，使用其他表单元素时情况会更糟。
+
+> 相反，我们可以使用bind:value指令
+
+```base
+<input bind:value={name}>
+```
+
+> 这意味着不仅对值的name更改会更新输入值，而且对输入值的更改也会更新name。
+
+### 六、生命周期  [more](https://svelte.dev/docs#Run_time)
+
+> 虽然在组件初始化期间调用生命周期函数很重要，但从哪里调用它们并不重要。因此，如果我们愿意，我们可以将区间逻辑抽象为一个辅助函数，utils.js
+
+![image](https://user-images.githubusercontent.com/93444868/141764680-d13542b8-ef3c-46f2-8e83-1267389a8d57.png)
+
+### 七、Store 状态容器
+
+
 
 
