@@ -80,7 +80,7 @@ module.exports = {
 
 > 相对比较不好理解，需要多练习
 
-### 二、属性 (与绑定章节有区别)
+### 二、属性 (符合组件层次结构，但与绑定章节有区别)
 
 > 将数据从一个组件向下传递到其子组件
 
@@ -130,7 +130,7 @@ on:click|once|capture={...}
 
 10. [DOM事件-转发](https:svelte.dev/tutorial/dom-event-forwarding)
 
-### 五、[绑定](https://svelte.dev/tutorial/text-inputs)  (与属性道具 props 章节有区别)
+### 五、[绑定](https://svelte.dev/tutorial/text-inputs)  (符合组件层次结构，但与属性道具 props 章节有区别)
 
 > 相对比较繁杂，需要在实践中多运用. Svelte 中的数据流是自上而下的——父组件可以在子组件上设置 props，组件可以在元素上设置属性，但反过来不行。
 
@@ -150,7 +150,41 @@ on:click|once|capture={...}
 
 ![image](https://user-images.githubusercontent.com/93444868/141764680-d13542b8-ef3c-46f2-8e83-1267389a8d57.png)
 
-### 七、Store 状态容器
+### 七、Store 状态容器 (非组件层次结构)
+
+> 并非所有应用程序状态都属于应用程序的`组件层次结构`。有时，值需要由多个不相关的组件或常规 JavaScript 模块访问。在 Svelte 中，使用`Store`来做到这一点。
+
+11. [自动订阅 `$`](https://svelte.dev/tutorial/auto-subscriptions)
+
+> 指定订阅省去了不少的模板代码，而且不需要手动退订
+
+```base
+
+<script>
+	import { count } from './stores.js';
+	import Incrementer from './Incrementer.svelte';
+	import Decrementer from './Decrementer.svelte';
+	import Resetter from './Resetter.svelte';
+
+// 	let count_value;
+
+// 	count.subscribe(value => {
+// 		count_value = value;
+// 	});
+</script>
+
+<h1>The count is {$count}</h1>
+
+<Incrementer/>
+<Decrementer/>
+<Resetter/>
+
+```
+
+12. [readable store](https://svelte.dev/tutorial/readable-stores)
+
+> 我的理解是不需要用户操作的就可更新的只读值称为`readable`
+
 
 
 
