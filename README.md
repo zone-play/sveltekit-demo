@@ -35,11 +35,30 @@ npm run build
 
 > 无论是否安装了适配器，都可以使用 `npm run preview` 预览构建的应用程序。 这不适用于在生产服务。
 
-# 在 Svelte 项目中使用 StoryBook, 根目录中执行，目前暂时用不了
+# 在 Svelte 项目中使用 StoryBook, 根目录中执行
 
 [err-storybook](https://github.com/storybookjs/storybook/issues/16680)<br/>
 [err-svelte](https://github.com/sveltejs/kit/issues/2801)
 
 ```base
 npx sb@next init
+```
+
+> .storybook create package.json
+
+```base
+{"type":"commonjs"}
+```
+
+> .storybook/main.js
+
+```base
+module.exports = {
+ ... ...
+
+  "svelteOptions": {
+     - "preprocess": require("../svelte.config.js").preprocess
+     + "preprocess": import("../svelte.config.js").preprocess
+  }
+}
 ```
