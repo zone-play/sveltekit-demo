@@ -72,5 +72,7 @@ module.exports = {
 
 ![image](https://user-images.githubusercontent.com/93444868/141735023-be37296c-17b6-4ea9-a990-86e25c44d0f0.png)
 
+3. [更新数组和对象-Svelte的反应性是由赋值语句触发的](https://www.sveltejs.cn/tutorial/updating-arrays-and-objects)
+
 
 
