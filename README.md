@@ -37,7 +37,6 @@ npm run build
 
 # 在 Svelte 项目中使用 StoryBook, 根目录中执行
 
-[err-storybook](https://github.com/storybookjs/storybook/issues/16680)<br/>
 [err-svelte](https://github.com/sveltejs/kit/issues/2801)
 
 ```base
