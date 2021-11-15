@@ -80,5 +80,32 @@ module.exports = {
 
 4. [属性传递 道具properties - 使用export关键字，`Svelte的第二特性`](https://www.sveltejs.cn/tutorial/declaring-props)
 
+### 三、HTML中的逻辑语块 [一个#字符始终表示块打开标签。一个/字符始终表示块结束标记。](https://www.sveltejs.cn/tutorial/else-blocks)
+
+5. [为 each 块添加 key](https://www.sveltejs.cn/tutorial/keyed-each-blocks)
+
+```base
+{#each things as thing (thing.id)}
+	<Thing current={thing.color}/>
+{/each}
+```
+
+6. [使用 await 处理数据](https://www.sveltejs.cn/tutorial/await-blocks)
+
+```base
+{#await promise}
+	<p>...waiting</p>
+{:then number}
+	<p>The number is {number}</p>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await}
+
+// or
+
+{#await promise then value}
+	<p>the value is {value}</p>
+{/await}
+```
 
 
