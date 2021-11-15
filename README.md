@@ -183,7 +183,7 @@ on:click|once|capture={...}
 
 12. [readable store](https://svelte.dev/tutorial/readable-stores)
 
-> 我的理解是不需要用户操作的就可更新的只读值称为`readable`
+> 我的理解是不需要用户操作的就可更新的只读值称为`readable`，例如 用户地理位置、时间等
 
 
 
