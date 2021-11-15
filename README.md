@@ -65,3 +65,6 @@ module.exports = {
 # Svelte 中涉及的非常规知识
 
 1. [label 标记语句](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/label)
+
+![image](https://user-images.githubusercontent.com/93444868/141733170-33cecd4e-875e-4503-a7a7-ed6c3e2dd072.png)
+
